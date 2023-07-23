@@ -1,0 +1,15 @@
+.loader {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  animation: loader .6s linear infinite;
+  background-color: dodgerblue;
+  z-index: 9999;
+}
+
+@keyframes loader {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}

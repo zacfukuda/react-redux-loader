@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { type ReactElement } from "react";
+import Loader from "./features/loader/Loader";
+import { useAppDispatch } from "./app/hooks";
+import { turnOn, turnOff } from "./features/loader/loaderSlice";
 
-function App() {
+export default function App(): ReactElement {
+  const dispatch = useAppDispatch();
+
+  function handleClick(): void {
+    dispatch(turnOn());
+
+    // imitating asyn fetch
+    setTimeout(() => {
+      dispatch(turnOff());
+    }, 2000);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Loader />
+      <br />
+      <button type="button" onClick={handleClick}>
+        Load
+      </button>
     </div>
   );
 }
-
-export default App;
