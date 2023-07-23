@@ -1,8 +1,7 @@
 # Loader with React and Redux in TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-Sample code to implement loader displayed on top of the page while the fetch request with TypeScripted React and Redux.
+This is a sample code to implement a loader displayed on top of the page while the fetch request, built with TypeScripted React and Redux.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
 
 ## Getting started
 
