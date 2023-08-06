@@ -1,11 +1,10 @@
-import React, { type ReactElement } from "react";
 import { useAppSelector } from "../../app/hooks";
 import { selectLoadingbarStatus } from "./loaderSlice";
 import "./loader.css";
 
-export default function Loadingbar(): ReactElement | null {
+export default function Loadingbar() {
   const status = useAppSelector(selectLoadingbarStatus);
-  if (status) {
+  if (status === 1) {
     return <div className="loader"></div>;
   } else {
     return null;

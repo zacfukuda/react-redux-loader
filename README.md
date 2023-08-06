@@ -1,6 +1,7 @@
 # Loader with React and Redux in TypeScript
 
-This is a sample code to implement a loader displayed on top of the page while the fetch request, built with TypeScripted React and Redux.\
+This is a sample code to implement a loader displayed on top of the page while the fetch request, built with TypeScripted React and Redux.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Getting started
@@ -18,7 +19,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ```
 src
-├── App.tsx
 ├── app
 │   ├── hooks.ts
 │   └── store.ts
@@ -27,6 +27,7 @@ src
 │       ├── Loader.tsx
 │       ├── loader.css
 │       └── loaderSlice.ts
+├── App.tsx
 ├── index.tsx
 └── react-app-env.d.t
 ```

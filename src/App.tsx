@@ -1,15 +1,14 @@
-import React, { type ReactElement } from "react";
 import Loader from "./features/loader/Loader";
 import { useAppDispatch } from "./app/hooks";
 import { turnOn, turnOff } from "./features/loader/loaderSlice";
 
-export default function App(): ReactElement {
+export default function App() {
   const dispatch = useAppDispatch();
 
-  function handleClick(): void {
+  function handleClick() {
     dispatch(turnOn());
 
-    // imitating asyn fetch
+    // imitating async function
     setTimeout(() => {
       dispatch(turnOff());
     }, 2000);
